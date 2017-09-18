@@ -1,2 +1,2 @@
 ### welcome to my blog
-I pleasure to share my blog in my spare time, welcome to star or issue
+I'am pleasure to share my blogs in my spare time, welcome to issue and star
