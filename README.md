@@ -1,4 +1,4 @@
-### welcome to my blog
+## Blog 
 
 ### JavaScript系列
 
