@@ -13,9 +13,9 @@
 ## 第三方库
 
 - [react-navigation 导航器](https://reactnavigation.org/docs/en/getting-started.html)
-  - StackNavigator 顶部导航
-  - BottomTabNavigator 底部导航
-  - DrawNavigator 侧滑导航
+  - ```StackNavigator```：顶部导航
+  - ```BottomTabNavigator```：底部导航
+  - ```DrawNavigator```：侧滑导航
 - [react-native-device-info](https://github.com/pusherman/react-native-network-info) 获取设备网络相关信息
 - [react-native-swipeable](https://github.com/jshanson7/react-native-swipeable) 列表每项可以左右滑动的组
 件
