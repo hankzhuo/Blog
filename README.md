@@ -18,6 +18,6 @@
 
 ## Python
 
-- [Python 基础知识思维导图](https://github.com/hankzhuo/Blog/blob/master/Python/python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.xmind)
+- [Python 基础知识思维导图](https://github.com/hankzhuo/Blog/tree/master/Python)
 
 ## 效率
