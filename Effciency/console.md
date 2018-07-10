@@ -14,7 +14,7 @@
 
 ```
 
-![]('./assets/images/console/1.png')
+![]('https://github.com/hankzhuo/Blog/blob/master/Effciency/assets/images/console/1.png')
 
  ## 2、```console.group()```
 
@@ -36,7 +36,7 @@
  doSomething({'firstName': 'hank', 'lastName': 'zhuo'})
 
 ```
-![]('./assets/images/console/1.png')
+![]('https://github.com/hankzhuo/Blog/blob/master/Effciency/assets/images/console/2.png')
 
 ## 3、```console.table()```
 ### 推荐指数：⭐️⭐️⭐️⭐️⭐️
@@ -61,7 +61,8 @@
 
  console.table(mySocial)
 ```
-![]('./assets/images/console/1.png')
+![]('https://github.com/hankzhuo/Blog/blob/master/Effciency/assets/images/console/3.png')
+![]('https://github.com/hankzhuo/Blog/blob/master/Effciency/assets/images/console/4.png')
 
  ## 4、```console.count()、console.time()、console.timeEnd()```
  ### 推荐指数：⭐️⭐️⭐️⭐️⭐️
@@ -85,7 +86,7 @@
  console.timeEnd('total')
 
 ```
-![]('./assets/images/console/1.png')
+![]('https://github.com/hankzhuo/Blog/blob/master/Effciency/assets/images/console/5.png')
 
 ## 5、```console.assert()、console.trace()```
 ### 推荐指数：⭐️⭐️⭐️⭐️
@@ -110,6 +111,8 @@ function foo() {
 foo();
 
 ```
-![]('./assets/images/console/1.png')
+![]('https://github.com/hankzhuo/Blog/blob/master/Effciency/assets/images/console/6.png')
+![]('https://github.com/hankzhuo/Blog/blob/master/Effciency/assets/images/console/7.png')
+
 
 > [原文链接](https://medium.freecodecamp.org/how-you-can-improve-your-workflow-using-the-javascript-console-bdd7823a9472)
