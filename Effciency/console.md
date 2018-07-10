@@ -1,3 +1,10 @@
+## ```console``` 常用的方法
+
+是否有前端小伙伴和我一样，一直都 console.log() 打印信息（🙋...），最近看到篇国外文章写到几种常用 console 的方法，超实用，希望大家看完后能够提高开发效率。
+
+> [ 文章都会保存在 github 上](https://github.com/hankzhuo/Blog/blob/master/Effciency/console.md)
+
+> [JS 源码](https://github.com/hankzhuo/Blog/blob/master/Effciency/assets/js/console.js)
 
 ## 1、 ```congsole.log()、console.error()、console.warn()、console.info()```
 ### 推荐指数： ⭐️⭐️⭐
@@ -13,8 +20,7 @@
  console.info("info ==> ", json, new Date())
 
 ```
-
-![]('https://github.com/hankzhuo/Blog/blob/master/Effciency/assets/images/console/1.png')
+![](./assets/images/console/1.png)
 
  ## 2、```console.group()```
 
@@ -36,7 +42,7 @@
  doSomething({'firstName': 'hank', 'lastName': 'zhuo'})
 
 ```
-![]('https://github.com/hankzhuo/Blog/blob/master/Effciency/assets/images/console/2.png')
+![](./assets/images/console/2.png)
 
 ## 3、```console.table()```
 ### 推荐指数：⭐️⭐️⭐️⭐️⭐️
@@ -61,8 +67,9 @@
 
  console.table(mySocial)
 ```
-![]('https://github.com/hankzhuo/Blog/blob/master/Effciency/assets/images/console/3.png')
-![]('https://github.com/hankzhuo/Blog/blob/master/Effciency/assets/images/console/4.png')
+
+![](./assets/images/console/3.png)
+![](./assets/images/console/4.png)
 
  ## 4、```console.count()、console.time()、console.timeEnd()```
  ### 推荐指数：⭐️⭐️⭐️⭐️⭐️
@@ -86,7 +93,7 @@
  console.timeEnd('total')
 
 ```
-![]('https://github.com/hankzhuo/Blog/blob/master/Effciency/assets/images/console/5.png')
+![](./assets/images/console/5.png)
 
 ## 5、```console.assert()、console.trace()```
 ### 推荐指数：⭐️⭐️⭐️⭐️
@@ -111,8 +118,8 @@ function foo() {
 foo();
 
 ```
-![]('https://github.com/hankzhuo/Blog/blob/master/Effciency/assets/images/console/6.png')
-![]('https://github.com/hankzhuo/Blog/blob/master/Effciency/assets/images/console/7.png')
 
+![](./assets/images/console/6.png)
+![](./assets/images/console/7.png)
 
 > [原文链接](https://medium.freecodecamp.org/how-you-can-improve-your-workflow-using-the-javascript-console-bdd7823a9472)

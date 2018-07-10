@@ -8,7 +8,7 @@
 - ```VirtualizedList```：只渲染视口的列表组件，窗口之外用空白渲染，是 ```FlatList``` 和 ```SectionList``` 底层的实现，具有更好的性能，但一般使用 ```FlatList``` 和 ```SectionList```。
 - ```swipeableFlatList```：列表可以从右侧滑出
 - ```DeviceEventEmitter```
-- ```Fetch```：获取网络数据，不过一般建议适用第三方库 ```axios```
+- ```Fetch```：获取网络数据，不过一般建议使用第三方库 ```axios```
 
 ## 第三方库
 
@@ -20,3 +20,7 @@
 - [react-native-swipeable](https://github.com/jshanson7/react-native-swipeable) 列表每项可以左右滑动的组
 件
 - [axios](https://github.com/axios/axios)：用于 Node 和浏览器的基于 promise 的 HTTP 客户端
+
+
+## Bug
+1、手机真机开启远程 JS 调试，```192.168.1.104:8081/debugger-ui/```（192.168.1.104 换成你的 ip 地址）；模拟器 JS 调试，浏览器打开```http://localhost:8081/debugger-ui/```
