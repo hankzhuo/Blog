@@ -1,11 +1,3 @@
-## ```console``` 常用的方法
-
-是否有前端小伙伴和我一样，一直都 console.log() 打印信息（🙋...），最近看到篇国外文章写到几种常用 console 的方法，超实用，希望大家看完后能够提高开发效率。
-
-> [ 文章都会保存在 github 上](https://github.com/hankzhuo/Blog/blob/master/Effciency/console.md)
-
-> [JS 源码](https://github.com/hankzhuo/Blog/blob/master/Effciency/assets/js/console.js)
-
 ## 1、 ```congsole.log()、console.error()、console.warn()、console.info()```
 ### 推荐指数： ⭐️⭐️⭐
 
