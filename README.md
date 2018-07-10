@@ -24,4 +24,4 @@
 
 ## 效率
 
-- [超级实用的 console 用法集合]()
+- [超级实用的 console 用法集合](https://github.com/hankzhuo/Blog/blob/master/Effciency/console.md)
