@@ -35,3 +35,6 @@
 4、`Image` 组件在 `release` 版本上一定要加上 `resizeMode` 属性，否则图片会出现超出视图，`debugger` 倒是正常。
 
 5、键盘升起时，会挡住视图，可以使用 `KeyboardAvoidingView ` 组件（`react-native` 组件），使得视图上移，键盘收起时，视图回归原始位置.
+
+6、使用 `<TextInput keyboardType='numeric'/>` 组件时，键盘失去焦点，无法自动收回问题，[参考解决方案](https://stackoverflow.com/questions/29685421/hide-keyboard-in-react-native?rq=1)
+
