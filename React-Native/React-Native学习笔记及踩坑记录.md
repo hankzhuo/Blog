@@ -23,6 +23,7 @@
 - [`axios`](https://github.com/axios/axios)：用于 Node 和浏览器的基于 `promise` 的 HTTP 客户端
 - [`react-native-i18n`](https://github.com/AlexanderZaytsev/react-native-i18n)：用于切换多国文字的库，默认是使用本地语言
 - [react-native-qrcode-scanner](https://github.com/moaazsidat/react-native-qrcode-scanner)：二维码扫描库
+- [`moment.js`](https://momentjs.com/) 跨时区、解决时间问题，必备库
 
 ## Bug
 
@@ -37,4 +38,12 @@
 5、键盘升起时，会挡住视图，可以使用 `KeyboardAvoidingView ` 组件（`react-native` 组件），使得视图上移，键盘收起时，视图回归原始位置.
 
 6、使用 `<TextInput keyboardType='numeric'/>` 组件时，键盘失去焦点，无法自动收回问题，[参考解决方案](https://stackoverflow.com/questions/29685421/hide-keyboard-in-react-native?rq=1)
+
+7、系统字体变化后，`Text` 组件也会跟着变化，如何阻止解决不变化？[参考解决方案](https://stackoverflow.com/questions/44369600/how-to-handle-a-change-in-system-level-font-size-on-ios-with-react-native)
+
+8、注册登录输入框，当用户以前登录过，再次进入时，焦点需要在密码输入框上。解决步骤是：
+  - 把 `TextInput` 变为非受控组件 `ref = 'input`
+  - 然后根据 `props` 判断 `this.refs.input.focus()`
+
+9、`React-Navigation` 有个问题，连续点击两次，会出现黑屏，解决方案：设置 200 ms（根据实际业务而定）延迟，少于这个时间不执行跳转。
 
