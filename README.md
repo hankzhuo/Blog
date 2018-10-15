@@ -13,7 +13,7 @@
 ## React
 
 ## Redux
-- [从现实中🌰理解 Redux](https://github.com/hankzhuo/redux-guide/blob/master/doc/1-start.md)
+- [从现实中一个例子理解 Redux](https://github.com/hankzhuo/redux-guide/blob/master/doc/1-start.md)
 
 ## React Native
 
@@ -22,8 +22,6 @@
 ## Python
 
 - [Python 基础知识思维导图](https://github.com/hankzhuo/Blog/tree/master/Python)
-
-## 计算机基础
 
 ## 效率
 
