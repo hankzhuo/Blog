@@ -12,6 +12,9 @@
 
 ## React
 
+## Redux
+- [从现实中🌰理解 Redux](https://github.com/hankzhuo/redux-guide/blob/master/doc/1-start.md)
+
 ## React Native
 
 - [React Native 学习笔记及踩坑记录](https://github.com/hankzhuo/Blog/blob/master/React-Native/React-Native%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%8F%8A%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.md)
