@@ -8,7 +8,7 @@
 
 ## CSS
 
-- [CSS一些动画效果](https://github.com/hankzhuo/Blog/issues/6)
+- [书中 CSS一些动画效果](https://github.com/hankzhuo/Blog/issues/6)
 
 ## React
 
