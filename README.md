@@ -17,9 +17,10 @@
 1. **[JavaScript](#1-JavaScript)**
 2. **[CSS](#2-CSS)**
 3. **[React](#3-React)**
-4. **[React Native](#4-React-Native)**
-5. **[算法, 数据结构](#5--Algorithm-Data-Structure)**
-6. **[效率](#6--效率)**
+4. **[Redux, Redux-Saga](#4-Redux)**
+5. **[React Native](#5-React-Native)**
+6. **[算法, 数据结构](#6--Algorithm-Data-Structure)**
+7. **[工作效率](#7--工作效率)**
 
 ---
 
@@ -61,7 +62,7 @@
 ---
 
 
-## 4. React Native
+## 5. React Native
 
 * 📜 [React Native 学习笔记及踩坑记录](https://github.com/hankzhuo/Blog/blob/master/React-Native/React-Native%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%8F%8A%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95.md)
 
@@ -69,13 +70,13 @@
 
 ---
 
-## 5. Algorithm, Data-Structure
+## 6. 算法, 数据结构
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ---
 
-## 6. 效率
+## 7. 工作效率
 
 * 📜 [超级实用的 console 用法集合](https://github.com/hankzhuo/Blog/blob/master/Effciency/console.md)
 
