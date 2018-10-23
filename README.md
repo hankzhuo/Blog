@@ -20,7 +20,7 @@
 4. **[Redux, Redux-Saga](#4-redux)**
 5. **[React Native](#5-react-native)**
 6. **[Algorithm, Data-Structure](#6-algorithm-data-structure)**
-7. **[工作效率](#7--工作效率)**
+7. **[工作效率](#7-工作效率)**
 
 ---
 
