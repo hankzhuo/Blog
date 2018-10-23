@@ -14,7 +14,7 @@
 ---
 
 ## Table of Contents
-1. **[JavaScript](#1-javaScript)**
+1. **[JavaScript](#1-javascript)**
 2. **[CSS](#2-css)**
 3. **[React](#3-react)**
 4. **[Redux, Redux-Saga](#4-redux)**
