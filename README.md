@@ -14,12 +14,12 @@
 ---
 
 ## Table of Contents
-1. **[JavaScript](#1-JavaScript)**
-2. **[CSS](#2-CSS)**
-3. **[React](#3-React)**
-4. **[Redux, Redux-Saga](#4-Redux)**
-5. **[React Native](#5-React-Native)**
-6. **[算法, 数据结构](#6--Algorithm-Data-Structure)**
+1. **[JavaScript](#1-javaScript)**
+2. **[CSS](#2-css)**
+3. **[React](#3-react)**
+4. **[Redux, Redux-Saga](#4-redux)**
+5. **[React Native](#5-react-native)**
+6. **[算法, 数据结构](#6--algorithm-data-structure)**
 7. **[工作效率](#7--工作效率)**
 
 ---
