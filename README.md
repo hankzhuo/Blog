@@ -19,7 +19,7 @@
 3. **[React](#3-react)**
 4. **[Redux, Redux-Saga](#4-redux)**
 5. **[React Native](#5-react-native)**
-6. **[算法, 数据结构](#6--algorithm-data-structure)**
+6. **[Algorithm, Data-Structure](#6--algorithm-data-structure)**
 7. **[工作效率](#7--工作效率)**
 
 ---
@@ -70,7 +70,7 @@
 
 ---
 
-## 6. 算法, 数据结构
+## 6. Algorithm, Data-Structure
 
 **[⬆ Back to Top](#table-of-contents)**
 
