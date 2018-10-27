@@ -6,7 +6,7 @@
 
 ## 2. 压栈与出栈
 
-**栈**是什么？可以理解是在内存中某一块区域，这个区域比喻成一个箱子，你往箱子里放些东西，这动作就是**压栈**。所以最先放下去的东西在箱子最底下，最后放下去的在箱子最上面。把东西从箱子中拿出来可以理解为**出栈*。
+**栈**是什么？可以理解是在内存中某一块区域，这个区域比喻成一个箱子，你往箱子里放些东西，这动作就是**压栈**。所以最先放下去的东西在箱子最底下，最后放下去的在箱子最上面。把东西从箱子中拿出来可以理解为**出栈**。
 
 
 所以得出结论，我们有个习惯，拿东西是从上面往下拿，最先放下去的东西在箱子的最底下，最后才能拿到。
@@ -18,7 +18,7 @@
 来看个例子，这个段代码执行顺序是怎样的？
 
 
-    function `() {
+    function fn1() {
         return 'this is fn1'
     }
     
@@ -56,11 +56,11 @@
 
 上面步骤容易把人绕晕，下面是流程图：
 
-![压栈出栈流程图](http://a2.qpic.cn/psb?/V144SrtM4G3DQV/g7COP4bkV1TIaeoLh2KcRV.r4hl7a7X1EfX6ni5mIy0!/b/dDUBAAAAAAAA&ek=1&kp=1&pt=0&bo=gwM.AgAAAAADF44!&tl=1&vuin=477615869&tm=1540479600&sce=60-4-3&rf=viewer_4)
+![压栈出栈流程图](https://user-gold-cdn.xitu.io/2018/10/25/166abe8b1fcb295e?w=899&h=574&f=png&s=12039)
 
 再看下在 chrome 浏览器环境下执行：
  
- ![chrome 执行顺序](http://m.qpic.cn/psb?/V144SrtM4G3DQV/AItyILmkAG43dM1dh7fWwLVwrIIgSBSJX8O8WrHZGmg!/b/dDEBAAAAAAAA&bo=0AgkBwAAAAACh1g!&rf=viewer_4)
+ ![chrome 执行顺序](https://user-gold-cdn.xitu.io/2018/10/25/166abe8b2012ddb5?w=2256&h=1828&f=gif&s=2288256)
 
 
 ## 3. 递归
@@ -82,7 +82,7 @@
 
 看流程图
 
- ![递归执行顺序](http://m.qpic.cn/psb?/V144SrtM4G3DQV/NE31TA*PJWYhd80i2u8uSYfV8TcHxZqkuLt6c6bViRs!/b/dFMBAAAAAAAA&bo=cgOzAwAAAAADF*M!&rf=viewer_4)
+ ![递归执行顺序](https://user-gold-cdn.xitu.io/2018/10/25/166abe8b202bfeca?w=882&h=947&f=png&s=31428)
 
 **所以，递归也是个压栈出栈的过程。**
 
