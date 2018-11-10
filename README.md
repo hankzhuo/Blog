@@ -55,7 +55,7 @@
 
 ## 4. Redux
 
-* 📜 [学习书中 CSS 一些动画效果](https://github.com/hankzhuo/redux-guide/blob/master/doc/1-start.md)
+* 📜 [以现实中例子理解 Redux](https://github.com/hankzhuo/redux-guide/blob/master/doc/1-start.md)
 
 **[⬆ Back to Top](#table-of-contents)**
 
