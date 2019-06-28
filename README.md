@@ -55,8 +55,8 @@
 
 ## 4. Redux
 
-* 📜 [理解 Redux 用法](https://github.com/hankzhuo/redux-guide/blob/master/doc/1-start.md)
-* 📜 [Redux 源码分析（一）](https://github.com/hankzhuo/redux-guide/blob/master/doc/1-start.md)
+* 📜 [理解 Redux 用法](https://github.com/hankzhuo/Blog/blob/master/Redux/use/1-start.md)
+* 📜 [Redux 源码分析（一）](https://github.com/hankzhuo/Blog/blob/master/Redux/redux%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%EF%BC%88%E4%B8%80%EF%BC%89.md)
 
 **[⬆ Back to Top](#table-of-contents)**
 
