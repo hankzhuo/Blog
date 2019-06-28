@@ -95,7 +95,3 @@ export default function promiseMiddleware({ dispatch }) {
 ```
 
 redux-promise 兼容了 FSA 标准（结果信息放在 payload 里），实现过程就是判断 action 或 action.payload 是否为 promise 对象，是则执行 then().catch()，否则 next(action)。
-
-## `redux-saga` 
-
-内容多，放在下一篇。
