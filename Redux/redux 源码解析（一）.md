@@ -236,8 +236,6 @@ function applyMiddleware(...middlewares) {
 
 ## `compose`
 
-从上面 `applyMiddleware` 源码中可以看到 `compose` 函数。该函数作用是让中间件一个个执行，上一个中间件执行结果作为下一个中间件的参数，函数返回  `(...args) => a(b(...args))`
-
 源码如下：
 
 ```javascript
@@ -260,14 +258,14 @@ function applyMiddleware(...middlewares) {
 var arr = [
   function fn1(next){
     return action => {
-      // next 为 fn2 return 函数
+      // next 为 fn2 return 函数（dispatch 函数）
       const returnValue = next(action)
       return returnValue
     }
   },
   function fn2(next) {
     return action => {
-      // next 为 fn3 return 函数
+      // next 为 fn3 return 函数（dispatch 函数）
       const returnValue = next(action)
       return returnValue
     }
@@ -300,7 +298,9 @@ fn // (args) => a(b(args)) 等价于 (dispatch) => fn1(fn2(fn3(dispatch)))
 // 返回值: (args) => fn1(fn2(fn3(args)))
 ```
 
-所以作者的用意是 `compose(f, g, h)`  返回 `(...args) => f(g(h(...args))) `，其中 `f、g、h` 是中间件 `middleware`。再结合上面 `middleware` 源码有一段 `dispatch = compose(...chain)(store.dispatch)` ，所以 `args` 为 `store.dispatch`，最终返回一个经过封装的  `dispatch`  函数。
+所以作者的用意是 `compose(f, g, h)`  返回 `(...args) => f(g(h(...args))) `，其中 `f、g、h` 是一个个中间件 `middleware`。
+
+结合上面 `applyMiddleware` 源码有一段 `dispatch = compose(...chain)(store.dispatch)` ，所以 `args` 为 `store.dispatch`，`(store.dispatch) => f(g(h(store.dispatch)))`，执行第一个中间件`h(store.dispatch)`，返回 `dispatch` 函数（参数为 action 的函数）作为下一个中间件的参数，通过一层层的传递，最终返回一个经过封装的  `dispatch`  函数。
 
 下面是打印日志中间件例子：
 
@@ -320,7 +320,9 @@ const logger2 = store => next2 => action2 => {
 const store = createStore(rootReducer, applyMiddleware(logger, logger2))
 ```
 
-每次触发一个 dispatch，中间件都会执行，打印的顺序为  `dispatch distapch2 finish2 finish`
+注意：但如果在某个中间件中使用了 `store.dipsatch()`，而不是 `next()`，那么就会回到起始位置，会造成无限循环了。
+
+每次触发一个 dispatch，中间件都会执行，打印的顺序为  `dispatch distapch2 finish2 finish`。
 
 
 ## `combineReducer`
