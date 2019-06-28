@@ -363,7 +363,9 @@ function combineReducers(reducers) {
 
 ## `bindActionCreators`
 
-这个 API 可以理解为：生成 action 的方法。主要是把 dispatch 也封装进 `bindActionCreator(actionCreator, dispatch)` 方法里面去，所以调用时候可以直接触发 `dispatch(action)`，不需要在手动调用 dispatch。源码如下：
+这个 API 可以理解为：生成 action 的方法。主要是把 dispatch 也封装进 `bindActionCreator(actionCreator, dispatch)` 方法里面去，所以调用时候可以直接触发 `dispatch(action)`，不需要在手动调用 dispatch，比如 `dispatch(fetchPeople({type: TYPE, text: 'fetch people'}))`，使用这个 API 后，则直接 `fetchPeople({type: TYPE, text: 'fetch people'})`
+
+源码如下：
 
 ```javascript
 function bindActionCreator(actionCreator, dispatch) {
