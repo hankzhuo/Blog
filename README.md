@@ -34,7 +34,7 @@
 * 📜 [Redux 源码分析（一）](https://github.com/hankzhuo/Blog/issues/8)
 
 
-## Algorithm, Data-Structure
+## 算法和数据结构
 
 * 📜 [用 JavaScript 的方式理解递归](https://github.com/hankzhuo/Blog/blob/master/JS/%E7%94%A8%20JavaScript%20%E7%9A%84%E6%96%B9%E5%BC%8F%E7%90%86%E8%A7%A3%E9%80%92%E5%BD%92.md)
 
