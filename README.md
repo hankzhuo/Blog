@@ -3,7 +3,7 @@
   <a href="https://github.com/hankzhuo/Blog"><img src="https://openparachute.files.wordpress.com/2017/11/blog-720.jpg" alt="my blog" width=200"></a>
   <br>
     <br>
-  Welcome to my Blog
+  Welcome to Hank's Blog
   <br>
 </h1>
 
