@@ -12,7 +12,7 @@
 
 参数 `preloadedState` 代表初始状态，很多时候都不传，不传该参数时候且 `enhancer` 是函数情况，`createStore` 函数内部会把 `enhancer` ，作为第二个参数使用，源码如下：
 
-```
+```javascript
   if (typeof preloadedState === 'function' && typeof enhancer === 'undefined') {
     enhancer = preloadedState
     preloadedState = undefined
@@ -21,7 +21,7 @@
 
 参数 `enhancer` 是 `store` 增强器，是一个函数， `createStore` 作为 `enhancer` 函数的参数，这里用到了函数式编程，返回函数又传递 `reducer` 和 `preloadState` 参数，执行最终返回一个增强的 `store`。`enhancer` 常有的是 `applyMiddleware()` 返回值，`react-devrools()` 等工具，源码如下：
 
-```
+```javascript
   if (typeof enhancer !== 'undefined') {
     if (typeof enhancer !== 'function') {
       throw new Error('Expected the enhancer to be a function.')
@@ -34,7 +34,7 @@
 
 介绍方法之前，下面是一些变量：
 
-```
+```javascript
   let currentReducer = reducer   // 当前的 reducer
   let currentState = preloadedState    // 当前的 state
   let currentListeners = []   // 当前的监听者
@@ -48,7 +48,7 @@
 
 `dispatch` 方法，接受一个参数`action`，`action` 是一个对象，该对象必须包括 `type` 属性，否则会报错。`dispatch` 函数内部，主要是执行了 `reducer() ` 函数，得到最新 `state`，赋值给 `currentState`，执行订阅者，`dispatch` 函数返回一个 `action` 对象。源码如下：
 
-```
+```javascript
   function dispatch(action) {
     if (typeof action.type === 'undefined') {
       throw new Error(
@@ -85,7 +85,7 @@
 
 获取最新的 state，就是返回 currentState。源码如下：
 
-```
+```javascript
   function getState() {
     return currentState
   }
@@ -98,7 +98,7 @@
 
 注意：订阅者必须是函数，否则报错。
 
-```
+```javascript
 function subscribe(listener) {
     if (typeof listener !== 'function') {  // 订阅者必须是函数
       throw new Error('Expected the listener to be a function.')
@@ -144,7 +144,7 @@ function subscribe(listener) {
 
 `ECMAScript  Observables` 目前只是草案，还没正式使用。
 
-```
+```javascript
 function observable() {
     const outerSubscribe = subscribe
     return {
@@ -175,7 +175,7 @@ function observable() {
 
 替换` reducer`，一般用不到。源码也简单，把 `nextReducer` 赋值给 `currentReducer` 。源码如下：
 
-```
+```javascript
   function replaceReducer(nextReducer) {
     if (typeof nextReducer !== 'function') {
       throw new Error('Expected the nextReducer to be a function.')
@@ -194,20 +194,20 @@ function observable() {
 
 `applyMiddleware()` 通常是上面提到的 `createStore` 方法的第三个参数 `enhancer`，源码如下：
 
- ```
+ ```javascript
 enhancer(createStore)(reducer, preloadedState)
  ```
 
 结合上面代码可以等价于
 
- ```
+ ```javascript
 applyMiddleware(...middlewares)(createStore)(reducer, preloadedState)
  ```
 `applyMiddleware` 使用了函数式编程，接收第一个参数元素为 `middlewares `的数组，返回值接收`createStore` 为参数的函数，返回值接收 `dispatch` 函数，接收一个 `action` 如 `(reducer, state)`，最终返回增强版的 `store`。
 
 源码如下：
 
-```
+```javascript
 function applyMiddleware(...middlewares) {
   return createStore => (...args) => {  
     const store = createStore(...args)  //  args 为 (reducer, initialState)
@@ -240,7 +240,7 @@ function applyMiddleware(...middlewares) {
 
 源码如下：
 
-```
+```javascript
  function compose(...funcs) {
   if (funcs.length === 0) {
     return arg => arg
@@ -256,7 +256,7 @@ function applyMiddleware(...middlewares) {
 
 虽然源代码没几行，作者实现方式太厉害了，如果理解起来有点费劲，可以看看下面例子分析：
 
-```
+```javascript
 var arr = [
   function fn1(next){
     return action => {
@@ -304,7 +304,7 @@ fn // (args) => a(b(args)) 等价于 (dispatch) => fn1(fn2(fn3(dispatch)))
 
 下面是打印日志中间件例子：
 
-```
+```javascript
 const logger = store => next => action => {
   console.log('dispatch', action)
   next(action)
@@ -329,7 +329,7 @@ const store = createStore(rootReducer, applyMiddleware(logger, logger2))
 
 核心源码如下：
 
-```
+```javascript
 function combineReducers(reducers) {
   const reducerKeys = Object.keys(reducers)
   const finalReducers = {}
@@ -363,7 +363,7 @@ function combineReducers(reducers) {
 
 这个 API 可以理解为：生成 action 的方法。主要是把 dispatch 也封装进 `bindActionCreator(actionCreator, dispatch)` 方法里面去，所以调用时候可以直接触发 `dispatch(action)`，不需要在手动调用 dispatch。源码如下：
 
-```
+```javascript
 function bindActionCreator(actionCreator, dispatch) {
   return function() {
     return dispatch(actionCreator.apply(this, arguments))
