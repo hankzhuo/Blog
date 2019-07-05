@@ -1,6 +1,6 @@
 这是分析 redux 源码系列第一篇。
 
-下面是 Redux API 源码的解读。
+下面是 Redux v4.x API 源码的解读。
 
 ## `createStore`
 

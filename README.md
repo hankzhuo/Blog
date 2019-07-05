@@ -31,7 +31,7 @@
 ## Redux
 
 * 📜 [理解 Redux 用法](https://github.com/hankzhuo/Blog/issues/9)
-* 📜 [Redux 源码分析](https://github.com/hankzhuo/Blog/issues/8)
+* 📜 [Redux v4.x 源码分析](https://github.com/hankzhuo/Blog/issues/8)
 * 📜 [redux-chunk、redux-promise 源码分析](https://github.com/hankzhuo/Blog/issues/10)
 
 
