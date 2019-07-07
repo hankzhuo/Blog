@@ -2,6 +2,7 @@
 
 下面介绍几种 action 是异步执行的。
 
+
 ## `redux-thunk`
 
 redux-chunk 是 redux 的一个中间件 middleware，核心是创建一个异步的 action。
