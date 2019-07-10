@@ -232,33 +232,64 @@
 
 ### 发布-订阅模式
 
-发布订阅模式，顾名思义，就是一个发布消息，一个监听消息，当有消息接收时处理消息。
+观察者对象有三个方法：订阅消息方法、取消订阅消息方法、发送订阅消息方法
 
 ``` javascript
-// js前端
-  window.onload = function () {
-    var socket = io.connect('http://localhost:20122?token=abc');
-    socket.on('connect', function() {
-      socket.emit('message', ':chat socket')
-    });
-    socket.on('message', function(data) {
-      alert(data)
-    })
-  };
+var Observer = (function() {
+  var messages = {}
+  return {
+    // 注册信息接口
+    regist: function (type, fn){
+      // 如果消息不存在，则新建一个消息类型
+      if (typeof messages[type] === 'undefined') {
+        messages[type] = [fn]
+      } else {
+        // 保证多个模块注册同一消息，都能够顺利执行
+        messages[type].push(fn)
+      }
+    },
+    // 发布信息接口
+    fire: function (type, args){
+      // 消息没有注册，则返回
+      if (!messages[type]) {
+        return;
+      }
+      // 定义消息信息：消息类型和消息数据
+      var events = {
+        type: type,
+        args: args || {}
+      }
+      var i, len = messages[type].length;
+      for (i = 0;i < len; i++) {
+        messages[type][i].call(this, events)
+      }
+    },
+    // 移除信息接口
+    remove: function (type, fn){
+      // 有注册过的消息
+      if (messages[type] instanceof Array) {
+        var i = messages[type].length - 1;
+        for (;i >= 0; i--) {
+          console.log('xxxx', messages[type][i] === fn)
+          messages[type][i] === fn && messages[type].splice(i, 1)
+        }
+      }
+      console.log('messages....', messages)
+    }
+  }
+})()
 
-  // 服务端
-  io.on('connection', function (socket) {
-    socket.on('chat message', function (msg) {
-      console.log('receive a message: ' + msg)
-      io.emit('chat message', msg);
-    });
-  })
+var fn = function(e) {
+  console.log(e)
+}
+
+Observer.regist('test', fn)
+Observer.fire('test', {msg: '测试数据'})
+Observer.remove('test', fn)
 
 ``` 
-
-可以参考我的另一个仓库地址，一个简单的实时聊天 [demo](https://github.com/hankzhuo/socket-example)
 
 ## 参考
 
  - 来自《JavaScript设计模式与开发实践》读书笔记
- - https://github.com/hankzhuo/socket-example
+ - 《JavaScript 设计模式》
