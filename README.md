@@ -26,7 +26,7 @@
 * 📜 [理解 Redux 用法](https://github.com/hankzhuo/Blog/issues/9)
 * 📜 [Redux v4.x 源码分析](https://github.com/hankzhuo/Blog/issues/8)
 * 📜 [redux-chunk、redux-promise 源码分析](https://github.com/hankzhuo/Blog/issues/10)
-* 📜 [react-router v5.x 源码解析](https://github.com/hankzhuo/Blog/issues/11)
+* 📜 [react-router v5.x 源码分析](https://github.com/hankzhuo/Blog/issues/11)
 
 ## React-Native
 
